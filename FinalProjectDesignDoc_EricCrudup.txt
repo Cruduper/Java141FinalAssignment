@@ -1,0 +1,49 @@
+Description: Create a program that sorts an array of random numbers. The # of random numbers
+will be chosen by the user. The user will also choose a min and a max, and the random numbers
+that are generated will all be equal to or between these values. The user will be asked if 
+they want to print the unsorted and sorted lists of random numbers.
+
+TOP-LEVEL-DESIGN
+
+Main:
+
+1) Ask the user for input						(F)
+2) Generate, possibly print, and sort random numbers based on input	(F)
+
+Step 1 of Main:
+NAME: input
+DESCR: takes input from user as parameters(not the programming kind) for 
+creating the list of random numbers. 
+PARAMS: Scanner scan, int[] parameters, String[] printer
+RETURN: void
+1)ask user for a min							
+2)ask user for a max
+3)ask user for the # of randoms
+4)ask user if they would like to see the unsorted list
+5)ask user if they would like to see the final sorted list
+
+Step 2 of Main:
+NAME: sort
+DESCR: creates a list of random numbers based on the users input, asks if the user wants to 
+print the unsorted list, then sorts the list.
+PARAMS: int[] parameters, String[] printer
+RETURN: void
+1)create an array of random numbers based on user input values		(F)
+2)sort the array from lowest number to highest				(F)
+
+Step 1 of sort
+NAME: list_generator
+DESCR: create an array of random numbers based on user input values
+PARAMS: int howmany, int max, int min, int i, int[] list, int[] printer
+1)fill an array (list[]) with random numbers between a max and min
+
+Step 2 of sort
+NAME: list_sorter
+DESCR: sort the array from lowest to highest
+PARAMS: int howmany, int max, int min, int i, int j, int[] list, String[] printer
+RETURN: void
+1)Have a 2nd array (int[] count) count the instances of each separate 
+value between the max and min in the first array
+2)take each value between max and min from the 2nd array and apply it to
+the first array the number of times it was counted
+
